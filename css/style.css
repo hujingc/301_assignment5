@@ -1,148 +1,167 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   background-color: #ddd;
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
-h1{
+h1 {
   font-size: 50px;
   line-height: 1;
   padding: 50px 0;
   text-align: center;
 }
 
-h2{
+h2 {
   font-size: 32px;
   line-height: 1.5;
 }
 
-nav ul{
+nav ul {
   list-style-type: none;
 }
 
-nav li{
-  /*Your code here */
+/* 4a: List items should display horizontally with 20px of padding on the right side only
+ */
+nav li {
+  display: inline;
+  padding-right: 20px;
 }
 
-nav a{
+/* 4b: Links should have no underline.
+ */
+nav a {
   color: black;
   font-weight: bold;
-  text-decoration: /*Your code here - remove the underline*/;
+  text-decoration: none;
 }
 
-nav a:hover{
-  text-decoration: /*Your code here - add the underline*/;
+/* 4c: When hovered over, links should have an underline */
+nav a:hover {
+  text-decoration:
+    underline;
 }
 
-.skip a{
+/* 3b: A “skip to content” link should be hidden until in focus. Then it should be positioned at the top. */
+.skip a {
   background: white;
   left: 0;
   padding: 6px;
-  position: /*Your code here - position relative to the parent */;
-  top:      /*Your code here - place 40px higher */;
+  position: relative;
+  top: -40px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
 }
 
-/*Your code here*/{
-/*Add the selector and rule to move the skip link to the exact top.*/
+/* 3a: Div is absolutely positioned, margin is set 40px above the margin of the page so it is hidden when not focused. */
+.skip {
+  position: absolute;
+  top: -40px;
 }
 
-/*Your code here*/{
-/*Add the selector and code to put a 2px black border around all elements in focus.*/
+/* 2a:Any element that are focusable by default (eg. links, inputs) should have a 2px solid black border when focused.  Use a generic selector. */
+body *:focus {
+  border: 2px solid black;
 }
 
 
-footer{
+footer {
   background-color: black;
   color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  grid-column: 1 / -1;
+  /*Can you explain what this does?*/
+  grid-row: 7 / auto;
+  /*Can you rewrite it?*/
   padding-top: 30px;
   text-align: center;
 }
 
 
-.container{
+.container {
 
   /*Your code here  */
 
   /*Provided*/
-  grid-template-rows: 30px auto auto auto auto auto 100px; 
-  width: 100vw; 
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  width: 100vw;
 }
 
-.nav{
-   /*Your code here */
+.nav {
+  /*Your code here */
 
   /*Provided*/
   background-color: #ddd;
-  padding: 20px 0; 
-  text-align: left; 
+  padding: 20px 0;
+  text-align: left;
 }
 
-header{
-  background-attachment: fixed; /* Parallax effect */
-  background-image: url();      /* Your code here - Link to header.jpg in the images folder */
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
+header {
+  background-attachment: fixed;
+  /* Parallax effect */
+  background-image: url();
+  /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;
+  /* Parallax effect */
+  background-repeat: no-repeat;
+  /* Parallax effect */
+  background-size: cover;
+  /* Parallax effect */
   color: white;
-  height: 400px;                /* Parallax effect */
+  height: 400px;
+  /* Parallax effect */
 
   /*Your code here - cover the entire row*/
 }
 
-header p{
+header p {
   color: white;
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
 }
 
-.about-image{
+.about-image {
   /*Your code here */
 
 }
 
-.about{
+.about {
   /*Your code here */
 }
 
-.method-image{
+.method-image {
   /*Your code here */
 }
 
-.method{
-    /*Your code here - start in the 2nd column*/
+.method {
+  /*Your code here - start in the 2nd column*/
 }
 
-.clients-image{
- /*Your code here */
+.clients-image {
+  /*Your code here */
 }
 
-.clients{
- /*Your code here */
+.clients {
+  /*Your code here */
 }
 
-.contact-image{
-   /*Your code here */
+.contact-image {
+  /*Your code here */
 }
 
-.contact{
-   /*Your code here */
+.contact {
+  /*Your code here */
 }
 
-.text-block{
+.text-block {
 
-   /*Your code here */
-  
+  /*Your code here */
+
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
@@ -150,71 +169,80 @@ header p{
 
 
 
-@media /*Your code here - Add the first media query.*/{
+@media
 
-  .container{
+/*Your code here - Add the first media query.*/
+  {
+
+  .container {
     /*Your code here */
-    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;*/
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+    */
   }
 
-  .nav{
+  .nav {
     background-color: #ddd;
 
-     /*Your code here */
-  }
-
-  .about-image{
-     /*Your code here */
-    }
-
-  .about{
     /*Your code here */
   }
 
-  .method-image{
+  .about-image {
     /*Your code here */
   }
 
-  .method{
+  .about {
     /*Your code here */
   }
 
-  .clients-image{
+  .method-image {
+    /*Your code here */
+  }
+
+  .method {
+    /*Your code here */
+  }
+
+  .clients-image {
     /*Your code here */
 
   }
 
-  .clients{
+  .clients {
     /*Your code here */
   }
 
-  .contact-image{
+  .contact-image {
     /*Your code here */
   }
 
-  .contact{
+  .contact {
     /*Your code here */
-   }
-
-}  /*End the media query*/
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
   }
 
-  .skip a{
+}
+
+/*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    /* Removes scroll animation */
+  }
+
+  .skip a {
     background: white;
     left: 0;
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: /* Your code here - set to default setting */
-    transition: /* Your code here - set to default setting */
-    z-index: 1;
+    -webkit-transition:
+      /* Your code here - set to default setting */
+      transition:
+      /* Your code here - set to default setting */
+      z-index: 1;
   }
 
-  .skip a:focus{
-    top:0;
+  .skip a:focus {
+    top: 0;
   }
 }
