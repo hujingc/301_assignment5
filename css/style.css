@@ -110,7 +110,7 @@ Begins on row 1 and spans only 1 row.
 header {
   background-attachment: fixed;
   /* Parallax effect */
-  background-image: url(images/header.jpg);
+  background-image: url("images/header.jpg");
   /* Your code here - Link to header.jpg in the images folder */
   background-position: center;
   /* Parallax effect */
