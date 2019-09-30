@@ -37,8 +37,7 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration:
-    underline;
+  text-decoration: underline;
 }
 
 .skip a {
@@ -54,7 +53,8 @@ nav a:hover {
 
 .skip {
   position: absolute;
-  top: -40px;
+  top: 0px;
+  width:200px;
 }
 
 body *:focus {
@@ -67,7 +67,6 @@ footer {
   color: white;
   grid-column: 1 / -1;
   /*Can you explain what this does?*/
-
   grid-row: 7 / span 1;
   /*Can you rewrite it?*/
   padding-top: 30px;
@@ -75,22 +74,25 @@ footer {
 }
 
 .container {
-  grid-template-rows: 30px auto auto auto auto auto 100px;
-  grid-template-columns: 100px 500px 100px;
-  width: 100vw;
   row-gap: 15px;
   display: grid;
+  grid-template-columns: 100px 500px 100px;
+
+  /*Provided*/
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  width: 100vw;
 }
 
 .nav {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 1/ span 1;
+  align-self: center;
+
   /*Provided*/
   background-color: #ddd;
   padding: 20px 0 20px 0;
   text-align: left;
-  align-self: center;
 }
 
 header {
