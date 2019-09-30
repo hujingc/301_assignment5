@@ -25,28 +25,22 @@ nav ul {
   list-style-type: none;
 }
 
-/* 4a: List items should display horizontally with 20px of padding on the right side only
- */
 nav li {
   display: inline;
   padding-right: 20px;
 }
 
-/* 4b: Links should have no underline.
- */
 nav a {
   color: black;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* 4c: When hovered over, links should have an underline */
 nav a:hover {
   text-decoration:
     underline;
 }
 
-/* 3b: A “skip to content” link should be hidden until in focus. Then it should be positioned at the top. */
 .skip a {
   background: white;
   left: 0;
@@ -58,13 +52,11 @@ nav a:hover {
   z-index: 1;
 }
 
-/* 3a: Div is absolutely positioned, margin is set 40px above the margin of the page so it is hidden when not focused. */
 .skip {
   position: absolute;
   top: -40px;
 }
 
-/* 2a:Any element that are focusable by default (eg. links, inputs) should have a 2px solid black border when focused.  Use a generic selector. */
 body *:focus {
   border: 2px solid black;
 }
@@ -81,24 +73,16 @@ footer {
   text-align: center;
 }
 
-/* 5: Mobile/default view: Grid container (container class) has 3 formatted columns of 100px, 500px, and 100px; and 7 rows - one of 30px, five rows of auto, and one last row of 100px. (Provided)*/
-/* Container has a gap between grid rows of 15px */
 .container {
   grid-template-rows: 30px auto auto auto auto auto 100px;
   grid-template-columns: 100px 500px 100px;
   width: 100vw;
   row-gap: 15px;
+  display: grid;
 }
 
-/* The nav class should have the following styles
-The default  (hence from mobile) view:
-Navigation is left aligned and centered vertically. 20px padding on top and bottom only.
-Navigation begins in the first column and ends in the last column.
-Begins on row 1 and spans only 1 row.
- */
-
 .nav {
-  grid-column: 1/ span all;
+  grid-column: 1/ span 1;
   grid-row: 1/ span 1;
   /*Provided*/
   background-color: #ddd;
@@ -111,7 +95,6 @@ header {
   background-attachment: fixed;
   /* Parallax effect */
   background-image: url("images/header.jpg");
-  /* Your code here - Link to header.jpg in the images folder */
   background-position: center;
   /* Parallax effect */
   background-repeat: no-repeat;
@@ -121,7 +104,8 @@ header {
   color: white;
   height: 400px;
   /* Parallax effect */
-grid-column: 1 /span all;
+  grid-column: 1 /span all;
+  grid-row: 2/span 1;
 }
 
 header p {
@@ -132,63 +116,62 @@ header p {
 }
 
 .about-image {
-  /*Your code here */
-
-}
-
-.about-image {
-  grid-column-start: 1 span auto;
-  grid-row-start: 3 span 1;
-  max-height: 700x;
+  display:block;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  max-height: 700px;
   overflow: hidden;
+
 }
 
 .about {
-  grid-column-start: 2 span 1;
-  grid-row-start: 3 span 1;
+  grid-column: 2/ span 1;
+  grid-row: 4/ span 1;
 }
 
 .method-image {
-  grid-column-start: 2 span 1;
-  grid-row-start: 3 span 1;
+  grid-column: 1/ span all;
+  grid-row: 4/ span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .method {
-  grid-column-start: 2 span 1;
-  grid-row-start: 3 span 1;
+  grid-column: 2 /span all;
+  grid-row: 4/ span 1;
 }
 
 .clients-image {
-  /*Your code here */
+  grid-column: 1/span all;
+  grid-row: 5 span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .clients {
-  /*Your code here */
+  grid-column: 2/span 1;
+  grid-row: 5/span 1;
 }
 
 .contact-image {
-  /*Your code here */
+  grid-column: 1/span all;
+  grid-row: 6/span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .contact {
-  /*Your code here */
+  grid-column: 2/span 1;
+  grid-row: 6/span 1;
 }
 
-/* 5a: (5b:) The text-block class should be centered vertically and horizontally (think css grid) with 30px padding on all sides */
-/* display:block? */
 .text-block {
-  justify-self: center;
   align-self: center;
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
 }
 
-
-/* 5b: (5c:) Media queries should be included:
-i. Styles of windows 800px or wider (henceforth referred to as desktop)
-1. Grid container (container class) has 5 formatted columns of 50px, auto, 500px, auto, and 50px; and 7 rows - one of 70px, 5 rows of 400px, and one last row of 100px. */
-/*
 @media screen and (min-width: 800px) {
   .container {
     grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
@@ -204,9 +187,17 @@ i. Styles of windows 800px or wider (henceforth referred to as desktop)
 
   }
 
-  .about-image {}
+  .about-image {
+    grid-column: 2/span 2;
+    grid-row: 3 span 1;
+    max-height: 700px;
+    overflow: hidden;
+  }
 
-  .about {}
+  .about {
+    grid-column: 3/span 2;
+    grid-row: 3/span 1;
+  }
 
   .method-image {}
 
@@ -216,19 +207,17 @@ i. Styles of windows 800px or wider (henceforth referred to as desktop)
 
   .clients {}
 
-  .contact-image {
-  }
+  .contact-image {}
 
-  .contact {
-  }
+  .contact {}
 
 }
 
 /*End the media query*/
 
 /* 5bii1: (5cii1:) Styles for preferred motion reduction
-In-page links should “jump” to page content instead of scroll
- 
+In-page links should “jump” to page content instead of scroll*/
+
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -249,4 +238,3 @@ In-page links should “jump” to page content instead of scroll
     top: 0;
   }
 }
-*/
