@@ -67,7 +67,8 @@ footer {
   color: white;
   grid-column: 1 / -1;
   /*Can you explain what this does?*/
-  grid-row: 7 / auto;
+
+  grid-row: 7 / span 1;
   /*Can you rewrite it?*/
   padding-top: 30px;
   text-align: center;
@@ -82,7 +83,8 @@ footer {
 }
 
 .nav {
-  grid-column: 1/ span 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
   grid-row: 1/ span 1;
   /*Provided*/
   background-color: #ddd;
@@ -94,7 +96,7 @@ footer {
 header {
   background-attachment: fixed;
   /* Parallax effect */
-  background-image: url("images/header.jpg");
+  background-image: url("../images/header.jpg");
   background-position: center;
   /* Parallax effect */
   background-repeat: no-repeat;
@@ -116,8 +118,7 @@ header p {
 }
 
 .about-image {
-  display: block;
-  grid-column: 1 / span 1;
+  grid-column: 1 / span all;
   grid-row: 3 / span 1;
   max-height: 700px;
   overflow: hidden;
@@ -126,7 +127,7 @@ header p {
 
 .about {
   grid-column: 2/ span 1;
-  grid-row: 4/ span 1;
+  grid-row: 3/ span 1;
 }
 
 .method-image {
@@ -137,13 +138,13 @@ header p {
 }
 
 .method {
-  grid-column: 2 /span all;
+  grid-column: 2 /span 1;
   grid-row: 4/ span 1;
 }
 
 .clients-image {
   grid-column: 1/span all;
-  grid-row: 5 span 1;
+  grid-row: 5/ span 1;
   max-height: 700px;
   overflow: hidden;
 }
