@@ -116,7 +116,7 @@ header p {
 }
 
 .about-image {
-  display:block;
+  display: block;
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
   max-height: 700px;
@@ -183,13 +183,16 @@ header p {
   .nav {
     background-color: #ddd;
     padding: 20px 0 20px 0;
-    grid-column-start: span 1;
+    padding: 35px 0 25px 0;
+    grid-column: 1/span all;
+    grid-row: 1/span 1;
+    text-align: right;
 
   }
 
   .about-image {
-    grid-column: 2/span 2;
-    grid-row: 3 span 1;
+    grid-column: 2 / span 2;
+    grid-row: 3 /span 1;
     max-height: 700px;
     overflow: hidden;
   }
@@ -199,17 +202,41 @@ header p {
     grid-row: 3/span 1;
   }
 
-  .method-image {}
+  .method-image {
+    grid-column: 3/ span 2;
+    grid-row: 4/ span 1;
+    max-height: 700px;
+    overflow: hidden;
+  }
 
-  .method {}
+  .method {
+    grid-column: 2/ span 2;
+    grid-row: 4/ span 1;
+  }
 
-  .clients-image {}
+  .clients-image {
+    grid-column: 2/ span 2;
+    grid-row: 5/ span 1;
+    max-height: 700px;
+    overflow: hidden;
+  }
 
-  .clients {}
+  .clients {
+    grid-column: 3/ span 2;
+    grid-row: 5/ span 1;
+  }
 
-  .contact-image {}
+  .contact-image {
+    grid-column: 3/ span 2;
+    grid-row: 6/ span 1;
+    max-height: 700px;
+    overflow: hidden;
+  }
 
-  .contact {}
+  .contact {
+    grid-column: 2/ span 2;
+    grid-row: 6/ span 1;
+  }
 
 }
 
